@@ -147,3 +147,7 @@ footer p, footer h3 {
 footer {
     margin-top: auto;
 }
+/* garante que não tenha eventos de hover nas informações de contato */
+.cursorevento{
+    pointer-events: none;
+}
