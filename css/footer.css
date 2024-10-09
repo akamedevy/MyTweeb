@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
 
+/* "direita" refere-se a uma lista que tem que ficar ao lado de outra */
+
 :root {
     --color-neutral-1: #ffffff;
     --color-neutral-10: #291E40;
@@ -151,3 +153,46 @@ footer {
 .cursorevento{
     pointer-events: none;
 }
+/* MOBILE */
+.mobile-view{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile_direita{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    #footer_content{
+        display: none;
+    }
+    .contatos{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile-view{
+        display: flex;
+    }
+    footer{
+        height: 400px;
+    }
+    .footer_list{
+        height: 100%;
+    }
+    footer li{
+        text-align: center;
+    }
+    #footer_social_midia{
+        top: 0;
+        right: 0;
+        margin-bottom: 25px;
+    }
+  }
+  
