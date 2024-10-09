@@ -84,30 +84,78 @@ header nav {
     font-family: 'Montserrat', sans-serif;
 }
 
-header nav ul {
-    display: flex;/**/
-    justify-content: flex-start; /**/
-    padding: 0;/**/
-    margin: 0;/**/
-    gap: 10px; /**/
-}
-
-header nav ul li {
+nav ul {
     list-style: none;/**/
-    margin-top: 11.9px;/**/
+    display: flex;/**/
+    gap: 15px;
 }
 
-header nav ul li a {
+nav ul li {
+    position: relative;
+    margin-top: 11px;
+}
+
+nav ul li a {
     text-decoration: none;/**/
     color: rgb(107, 104, 104);/**/
     font-weight: 500;/**/
-    padding: 10px 25px;/**/
-    font-size: 15px;/**/
-    font-family: 'Montserrat', sans-serif;
+    padding: 18px;
+    font-size: 15px;
 }
-header nav ul li a:hover {
-   color: #000000;/**/
+nav ul li a:hover {
+   color: #40331e;/**/
 }
-header nav ul li a i{
+nav ul li a i{
     font-size: 18px;/**/
+}
+
+nav ul li .submenu {
+    display: none;
+    position: absolute;
+    background-color: #291E40;
+    list-style: none;
+    padding: 10px;
+    margin-top: 44px;
+    top: 100%;
+    right: -30px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 180px;
+    width: auto;
+}
+  
+nav ul li .submenu li a{
+    color: white;
+    padding: 8px;
+    display: block;
+    font-size: 14px;
+}
+
+nav ul li .submenu li a:hover{
+    background-color: #4145d2;
+    border-radius: 10px;
+}
+input[type="checkbox"]{
+    display: none;
+    
+}
+.dropdown label {
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(107, 104, 104);
+    font-weight: 500;
+    font-size: 15px;
+}
+.dropdown label:hover {
+    color: #40331e;
+}
+
+input[type="checkbox"]:checked ~ .submenu {
+    display: block;
+}
+.submenu-icon{
+    width: 12px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
 }
